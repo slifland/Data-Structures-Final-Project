@@ -12,7 +12,7 @@ public class GeneticPolynomial{
     static int CHILDREN = 10;
     public static HashMap<Integer, Double> solutionSet;
     public static HashMap<Integer, Double> parentPolySet;
-    public static int max;
+    //public static int max;
     public static void main(String[] args) throws IOException {
       Scanner input = new Scanner(System.in);
       ArrayList<Double> li = new ArrayList<Double>(); 
@@ -30,13 +30,13 @@ public class GeneticPolynomial{
       PrintStream stdout = System.out;
       Polynomial targetPoly = new Polynomial(li);
       solutionSet = populateSet(targetPoly);
-      int graphMax = Integer.MIN_VALUE;
-      for(Map.Entry<Integer, Double> k : solutionSet.entrySet()){
-         if(k.getValue() > graphMax){
-            graphMax = (int)Math.round(k.getValue());
-         }
-      }
-      max = graphMax;
+      // int graphMax = Integer.MIN_VALUE;
+      // for(Map.Entry<Integer, Double> k : solutionSet.entrySet()){
+      //    if(k.getValue() > graphMax){
+      //       graphMax = (int)Math.round(k.getValue());
+      //    }
+      // }
+      // max = graphMax;
       System.setOut(new PrintStream(new FileOutputStream("targetSols.txt")));
       for(Map.Entry<Integer, Double> k : solutionSet.entrySet()){
          System.out.println(k.getKey() + "," + k.getValue());
