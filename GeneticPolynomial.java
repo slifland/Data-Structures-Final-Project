@@ -1,13 +1,8 @@
 import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
-import java.awt.*;
-import javax.swing.*;
-import java.awt.geom.*;
 import java.io.IOException;
 import java.io.PrintStream;
 import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.File;
 
 public class GeneticPolynomial{
     static double MIN_RANGE = -50;
@@ -72,10 +67,11 @@ public class GeneticPolynomial{
             }
             System.setOut(stdout);
             System.out.println(minDist);
+            Process P = Runtime.getRuntime().exec("python /workspaces/Data-Structures-Final-Project/graph.py");
          }
       }
    }
-   
+
    public static HashMap<Integer, Double> populateSet(Polynomial poly){
       HashMap<Integer, Double> solutionSet = new HashMap<Integer, Double>();
       for(int i = -100; i <= 100; i+= 2){
