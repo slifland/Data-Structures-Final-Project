@@ -67,7 +67,7 @@ public class GeneticPolynomial{
             }
             System.setOut(stdout);
             System.out.println(minDist);
-            Process P = Runtime.getRuntime().exec("python C://Users//Seth Lifland//Downloads//Data-Structures-Final-Project//graph.py");
+            Process P = Runtime.getRuntime().exec("py C://Users//Seth Lifland//PycharmProjects//pythonProject3//main.py");
             P.destroy();
             System.out.println(P.exitValue());
          }
